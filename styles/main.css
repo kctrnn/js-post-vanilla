@@ -1,0 +1,119 @@
+:root {
+  --primary: rgba(251, 147, 0, 1);
+  --secondary: rgb(245, 71, 72);
+  --dark: #333;
+  --gray: #6c757d;
+
+  --font: 'Rubik', sans-serif;
+  --shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.6rem;
+  color: var(--dark);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body > main {
+  flex: 1;
+}
+
+.container {
+  max-width: 115rem;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(251, 147, 0, 1);
+}
+
+a:hover {
+  color: rgba(251, 147, 0, 0.75);
+}
+
+ul {
+  list-style: none;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  text-align: center;
+  border: 0;
+  background-color: #555;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.4rem;
+  font-family: var(--font);
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.2rem;
+  width: auto;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btn--circle {
+  border-radius: 50%;
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.is-hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 97rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 73rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 55rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    max-width: 100%;
+  }
+}

@@ -2,13 +2,120 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Post Vanilla | kctrnn</title>
-  </head>
+    <title>JS Post Vanilla</title>
 
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+
+    <!-- Use font Rubik -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Use font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/shared/header.css" />
+    <link rel="stylesheet" href="styles/shared/footer.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+  </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/js/main.js"></script>
+    <!-- This is template HTML for a post item -->
+    <template id="postItemTemplate">
+      <li class="posts-item" id="postItem">
+        <div class="card">
+          <img src="images/21.jpg" alt="" class="card-img" id="postItemImg" />
+
+          <div class="card-body">
+            <h5 class="card-title" id="postItemTitle">Card title</h5>
+
+            <p class="card-text" id="postItemDesc">
+              This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.
+            </p>
+
+            <p class="card-text">
+              <small>by</small>
+              <small class="card-author" id="postItemAuthor">Kim Chan</small>
+              <small class="card-date" id="postItemTime"> - 3 mins ago</small>
+            </p>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn btn--circle" id="editPost">
+              <i class="fas fa-pen"></i>
+            </button>
+            <button class="btn btn--circle" id="deletePost">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      </li>
+    </template>
+
+    <header>
+      <nav class="navbar">
+        <div class="container navbar-inner">
+          <a href="index.html" class="navbar-logo">
+            <img src="images/logo.svg" alt="Logo easy frontend" />
+          </a>
+
+          <ul class="navbar-menu">
+            <li class="menu-item">
+              <a href="add-edit-post.html" class="menu-link"
+                ><i class="fas fa-plus-square"></i>Add new post</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Carousel -->
+      <section class="carousel"></section>
+
+      <!-- POST section -->
+      <section class="posts">
+        <div class="container">
+          <h1 class="posts-title">Latest posts</h1>
+
+          <!-- Post list -->
+          <ul class="posts-list"></ul>
+
+          <!-- Pagination -->
+          <nav class="posts-nav">
+            <ul class="pagination" id="postPagination">
+              <li class="page-item">
+                <a href="#" class="page-link"><span aria-hidden="true">&laquo;</span></a>
+              </li>
+
+              <li class="page-item">
+                <a href="#" class="page-link">1</a>
+              </li>
+              <li class="page-item"><a href="#" class="page-link">2</a></li>
+              <li class="page-item"><a href="#" class="page-link">3</a></li>
+
+              <li class="page-item">
+                <a href="#" class="page-link"><span aria-hidden="true">&raquo;</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <footer>Created by @kctrnn</footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/home.js"></script>
   </body>
 </html>
